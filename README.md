@@ -66,7 +66,7 @@ rm -rf $RPM_BUILD_ROOT/data/projects/sakti/temp_RPM_1
 rm -rf $RPM_BUILD_ROOT/data/projects/sakti/temp_RPM_2
 
 %changelog
-* Fri Dec 28 2018 sakti
+* Fri Dec 28 2018 sakti <email@id.com>
  - This the first build of rpm
    initia comments
 ```
