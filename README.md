@@ -1,6 +1,6 @@
 # Steps to build rpm package in Linux environment
 
-## First create the spec file to buld the rpm
+### First create the spec file to buld the rpm
 
 ```shell
 ###############################################################################
@@ -71,32 +71,32 @@ rm -rf $RPM_BUILD_ROOT/data/projects/sakti/temp_RPM_2
    initia comments
 ```
 
-## %description
+### %description
 The %description section of the spec file contains a description of the rpm package. It can be very short or can contain many lines of information.
 
-## %prep
+### %prep
 The %prep section is the first script that is executed during the build process. This script is not executed during the installation of the package.
 
 This script is just a Bash shell script. It prepares the build directory, creating directories used for the build as required and copying the appropriate files into their respective directories. This would include the sources required for a complete compile as part of the build.
 
 The $RPM_BUILD_ROOT directory represents the root directory of an installed system. The directories created in the $RPM_BUILD_ROOT directory are fully qualified paths, such as /data/projects/sakti/temp_RPM_1, /data/projects/sakti/temp_RPM_2, /usr/local/bin, and so on, in a live filesystem.
 
-## %files
+### %files
 This section of the spec file defines the files to be installed and their locations in the directory tree. It also specifies the file attributes and the owner and group owner for each file to be installed. The file permissions and ownerships are optional. Directories are created as required during the installation if they do not already exist.
 
-## %pre
+### %pre
 This section is empty in our lab project’s spec file. This would be the place to put any scripts that are required to run during installation of the rpm but prior to the installation of the files.
 
-## %post
+### %post
 This one runs after the installation of files. This section can be pretty much anything you need or want it to be, including creating files, running system commands, and restarting services to reinitialize them after making configuration changes.
 like pwd, ls in our case to veryfy the files and currentdirectory just for info in this case.
-## %clean
+### %clean
 This Bash script performs cleanup after the rpm build process. The two lines in the %clean section below remove the build directories created by the rpmbuild command.
 ```shell
 rm -rf $RPM_BUILD_ROOT/data/projects/sakti/temp_RPM_1
 rm -rf $RPM_BUILD_ROOT/data/projects/sakti/temp_RPM_2
 ```
-## %changelog
+### %changelog
 This optional text section contains a list of changes to the rpm and files it contains. The newest changes are recorded at the top of this section.
 ```shell
 %changelog
