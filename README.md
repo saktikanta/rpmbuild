@@ -22,7 +22,7 @@ Requires: screen
 #Requires: mc
 Requires: dmidecode
 #BuildRoot: ~/rpmbuild/
-BuildRoot: /data/projects/saktikantas/rpmbuild/
+BuildRoot: /data/projects/sakti/rpmbuild/
 
 # Build with the following syntax:
 # rpmbuild --target noarch -bb utils.spec
@@ -39,8 +39,8 @@ echo "BUILDROOT = $RPM_BUILD_ROOT"
 mkdir -p $RPM_BUILD_ROOT/data/projects/sakti/temp_RPM_1
 mkdir -p $RPM_BUILD_ROOT/data/projects/sakti/temp_RPM_2
 
-cp /data/projects/saktikantas/*.log $RPM_BUILD_ROOT/data/projects/sakti/temp_RPM_1
-cp /data/projects/saktikantas/*.py $RPM_BUILD_ROOT/data/projects/sakti/temp_RPM_2
+cp /data/projects/sakti/*.log $RPM_BUILD_ROOT/data/projects/sakti/temp_RPM_1
+cp /data/projects/sakti/*.py $RPM_BUILD_ROOT/data/projects/sakti/temp_RPM_2
 
 exit
 
